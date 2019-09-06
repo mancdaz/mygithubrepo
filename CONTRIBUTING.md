@@ -70,3 +70,4 @@ In order for a PR to be merged, the following criteria should be met:
 * There must be at least 1 member of the engineering team review and give the PR a +1 approval using the review guidelines above. Protected branches are used to prevent un-reviewed code from being merged.
 * Use the gitlab/github code review function so that your comments are collated into a single review, and use the 'request changes' feature if available
 * The author should merge the patch after tests/review.
+* Do not squash commits on merge

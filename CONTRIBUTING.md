@@ -29,16 +29,15 @@ Please avoid the following in a commit:
 Expected git commit message structure (Based on [this article](https://chris.beams.io/posts/git-commit/)):
 
 * The first line should ideally be limited to 50 characters, but must be no more than 70 characters.
-* The first line should not end with a full stop and the first word should be capitalised.
+* The first line should include the JIRA ticket number, followed by a brief description of the change. e.g. ```HPCDIR-9999:Remove a typo in README.md```
+* The first line should not end with a full stop and the first word of the description should be capitalised.
 * Use the imperative mood in the subject line - e.g. ```Fix a typo in CONTRIBUTING.md```, ```Remove if/else block in myfile.sh```, ```Eat your dinner```.
-* Insert a single blank line after the first line.
+* Insert a single blank line after the first line, if making a multi-line commit.
 * Subsequent lines should be wrapped at 72 characters.
 * Provide a detailed description of the change in the following lines, using the guidelines in the section below.
-* The last line of the commit should be a reference to the issue being fixed using the word JIRA, followed by the JIRA issue Key e.g. ```JIRA: HPCDIR-9999```
 
 In your commit message please consider the following points:
 
-* In the commit subject line, provide a brief description of the change.
 * The commit message must be descriptive and contain all the information required to fully understand and review the patch.
 * Do not assume the reviewer understands what the original problem was.
 * Do not assume the reviewer has access to external web services or site.
@@ -68,6 +67,6 @@ When reviewing a PR, please ensure the included commit(s):
 In order for a PR to be merged, the following criteria should be met:
 
 * Any configured tests must have passed.
-* There must be at least 2 members of the engineering team review and give the PR a +1 approval using the review guidelines above.
- * Use GitHub's [pull request reviews](https://help.github.com/articles/about-pull-request-reviews/) function so that your comments are collated into a single review.
-* The second +1 reviewer should merge the patch.
+* There must be at least 1 member of the engineering team review and give the PR a +1 approval using the review guidelines above. Protected branches are used to prevent un-reviewed code from being merged.
+* Use the gitlab/github code review function so that your comments are collated into a single review, and use the 'request changes' feature if available
+* The author should merge the patch after tests/review.
